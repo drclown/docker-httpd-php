@@ -5,9 +5,6 @@ RUN apt-get update && apt-get install -y apache2 \
 
 RUN a2enmod proxy_fcgi
 
-ADD ./conf/app.conf /etc/apache2/sites-available/
-RUN a2ensite app
-
 # Enabling mod_rewrite
 RUN a2enmod rewrite
 
